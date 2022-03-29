@@ -1,0 +1,61 @@
+body {
+  overflow-x: hidden;
+  background-color: black;
+}
+p {
+  font-size: 1rem;
+}
+.container-home {
+  position: relative;
+  text-align: left;
+  color: rgb(167, 165, 165);
+}
+h1 {
+  color: rgb(131, 126, 126);
+}
+.top-left {
+  position: absolute;
+  top: 80px;
+  left: 86px;
+}
+/* @media screen and (min-width: 601px) {
+  div.example {
+    font-size: 80px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  div.example {
+    font-size: 30px;
+  }
+} */
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
+.cimg {
+  -webkit-filter: grayscale(100%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  overflow: hidden;
+  margin: 0 auto;
+  transition: 0.3s all ease-in-out;
+}
+
+.cimg:hover {
+  -webkit-filter: none;
+  filter: none;
+  transform: scale(1.05);
+}
+.container-butt {
+  position: relative;
+}
+.centered {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.btn:hover {
+  opacity: 0.5;
+}

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <style>
+      img {
+            -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+            filter: grayscale(100%);
+            width: 280px;
+            height: 280px;
+            overflow: hidden;
+            margin: 0 auto;
+            transition: 0.3s all ease-in-out;
+        }
+        img:hover {
+        -webkit-filter: none;
+        filter: none;
+        transform: scale(1.05);
+        }  
+    </style>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a href="#" class="navbar-brand">PHOTO GALLERY</a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Catagories</a>
+                    <div class="dropdown-menu">
+                        <li id="pink" class="dropdown-item">Pink</li>
+                        <li id="yellow" class="dropdown-item">Yellow</li>
+                        <li id="book" class="dropdown-item">Book</li>
+                        <li id="purple" class="dropdown-item">Purple</li>
+                        <li id="sky" class="dropdown-item">Sky</li>
+                        <li id="all" class="dropdown-item">All</li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <center><h1 class="mt-5">PORTRAIT GALLERY</h1></center>
+    <div id="allimg" class="mt-5 mb-5">
+        <div id="pinkimg" class="row mt-5 mb-5 " data-aos="flip-down">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="nature img/pink2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's
+                            content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="nature img/pink1.jpg" class="card-img-top" height="287px">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's
+                            content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="nature img/pink6.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's
+                            content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="yellowimg" class="mt-5 mb-5">
+            <div class="row mb-5">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="nature img/yellow.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the
+                                card's
+                                content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="nature img/yellow3.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the
+                                card's
+                                content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="nature img/yellow5.jpg" class="card-img-top>
+                            <div class=" card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's
+                            content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="nature img/yellow1.jpg" class="card-img-top" height="287px">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the
+                                card's
+                                content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="nature img/yellow4.jpg" class="card-img-top" height="287px">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the
+                                card's
+                                content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="nature img/yellow2.jpg" class="card-img-top" height="287px">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the
+                                card's
+                                content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="bookimg" class="mt-5 mb-5">
+            <div class="row mb-5">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="nature img/book1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the
+                                card's
+                                content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="nature img/book6.jpg" class="card-img-top" height="287px">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the
+                                card's
+                                content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="nature img/book2.jpg" class="card-img-top" height="287px">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the
+                                card's
+                                content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="nature img/book3.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the
+                                card's
+                                content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="nature img/book4.jpg" class="card-img-top" height="287px">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the
+                                card's
+                                content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="nature img/book5.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the
+                                card's
+                                content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="purpleimg" class="row mt-5 mb-5 ">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="nature img/purple1.jpg" class="card-img-top" height="287px">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's
+                            content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="nature img/purple2.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's
+                            content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="nature img/purple3.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's
+                            content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="skyimg" class="mt-5 mb-5">
+            <div class="row mb-5">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="nature img/sky2.jpg" class="card-img-top" height="285px">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the
+                                card's
+                                content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="nature img/sky7.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the
+                                card's
+                                content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="nature img/sky10.jpg" class="card-img-top" height="287px">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the
+                                card's
+                                content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5 mb-5">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="nature img/sky3.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the
+                                card's
+                                content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="nature img/sky.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the
+                                card's
+                                content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="nature img/sky8.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the
+                                card's
+                                content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="nature img/sky4.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the
+                                card's
+                                content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="nature img/sky5.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the
+                                card's
+                                content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="nature img/sky6.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the
+                                card's
+                                content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="jquery.js"></script>
+    <script>
+        $("#pink").click(function () {
+            $("#yellowimg").hide();
+            $("#bookimg").hide();
+            $("#purpleimg").hide();
+            $("#skyimg").hide();
+             $("#pinkimg").show();
+
+        });
+         $("#yellow").click(function () {
+                $("#pinkimg").hide();
+                $("#bookimg").hide();
+                $("#purpleimg").hide();
+                $("#skyimg").hide();
+                $("#yellowimg").show();
+            });
+        $("#book").click(function () {
+                $("#pinkimg").hide();
+                $("#yellowimg").hide();
+                $("#purpleimg").hide();
+                $("#skyimg").hide();
+               $("#bookimg").show();
+            });
+        $("#purple").click(function () {
+                $("#pinkimg").hide();
+                $("#yellowimg").hide();
+                $("#bookimg").hide();
+                $("#skyimg").hide();
+                $("#purpleimg").show();
+            });
+        $("#sky").click(function () {
+                $("#pinkimg").hide();
+                $("#yellowimg").hide();
+                $("#bookimg").hide();
+                $("#purpleimg").hide();
+                $("#skyimg").show();
+            });
+         $("#all").click(function () {
+                $("#pinkimg").show();
+                $("#yellowimg").show();
+                $("#bookimg").show();
+                $("#purpleimg").show();
+                $("#skyimg").show();
+             });   
+
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+        });
+    </script>
+</body>
+
+</html>
